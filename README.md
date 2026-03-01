@@ -11,7 +11,7 @@ val client = HttpClient { // CIO, OkHttp, etc.
     expectSuccess = true
     // ... ContentNegotiation, logging, etc.
 }
-
+```
 # 🚀 IdeaVim Configuration & Cheat Sheet
 
 This configuration is optimized for **Android Development** on **Arch Linux**. It prioritizes system clipboard synchronization (`unnamedplus`) and fast navigation without taking hands off the home row.
