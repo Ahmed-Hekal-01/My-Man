@@ -12,13 +12,13 @@ val client = HttpClient { // CIO, OkHttp, etc.
     // ... ContentNegotiation, logging, etc.
 }
 ```
-# 🚀 IdeaVim Configuration & Cheat Sheet
+###  IdeaVim Configuration & Cheat Sheet
 
 This configuration is optimized for **Android Development** on **Arch Linux**. It prioritizes system clipboard synchronization (`unnamedplus`) and fast navigation without taking hands off the home row.
 
 ## ⌨️ Key Bindings Cheat Sheet
 
-### 📋 Clipboard & Editing
+### Clipboard & Editing
 | Key | Mode | Action | Description |
 | :--- | :--- | :--- | :--- |
 | **`p`** | Visual | **Clean Paste** | Replaces selection with system clipboard (no extra newlines). |
@@ -27,7 +27,7 @@ This configuration is optimized for **Android Development** on **Arch Linux**. I
 | **`<Space>d`** | Both | **Void Delete** | Deletes text without overwriting your clipboard. |
 | **`ga`** | Both | **Multi-Cursor** | Selects all occurrences of the word under cursor. (Exit with `Esc`). |
 
-### ⚡ Navigation & Flow
+### Navigation & Flow
 | Key | Action | Description |
 | :--- | :--- | :--- |
 | **`<Space>l`** | **Last File** | Instantly toggles between the current and previous file. |
@@ -36,13 +36,13 @@ This configuration is optimized for **Android Development** on **Arch Linux**. I
 | **`mm`** | **Clear Search** | Clears the yellow search highlights (`:noh`). |
 | **`<Space>t`** | **Terminal** | Toggles the internal IDE terminal. |
 
-### 🪟 Window Management
+### Window Management
 | Key | Action | Description |
 | :--- | :--- | :--- |
 | **`<Space>w`** | **Close Tab** | Closes the current editor tab. |
 | **`<Space>ea`** | **Close Others** | Closes **ALL** tabs except the active one. |
 
-### 🛠️ Code Intelligence & Refactoring
+### Code Intelligence & Refactoring
 | Key | Action | Description |
 | :--- | :--- | :--- |
 | **`<Space><Space>`** | **Quick Fix** | Opens the "Alt+Enter" intention actions menu. |
@@ -53,7 +53,7 @@ This configuration is optimized for **Android Development** on **Arch Linux**. I
 | **`gr`** | **Find Usages** | Find where the symbol is used. |
 | **`<Space>j` / `k`** | **Error Jump** | Jump to Previous/Next error in file. |
 
-### 🐞 Debugging
+### Debugging
 | Key | Action | Description |
 | :--- | :--- | :--- |
 | **`<Space>dr`** | **Run** | Run App. |
@@ -63,7 +63,7 @@ This configuration is optimized for **Android Development** on **Arch Linux**. I
 
 ---
 
-## ⚙️ The `.ideavimrc` Configuration
+##  The `.ideavimrc` Configuration
 
 Copy the code below into your `~/.ideavimrc` file.
 
@@ -192,3 +192,4 @@ nnoremap <leader>b  :action ToggleLineBreakpoint<CR>
 nnoremap <leader>db :action Debug<CR>
 nnoremap <leader>dr :action Run<CR>
 nnoremap <leader>ds :action Stop<CR>
+```
