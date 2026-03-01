@@ -1,22 +1,8 @@
-### Ktor 429 HTML Parsing Crash
-
-**Symptom:** The API returns `429 Too Many Requests` as an HTML page instead of JSON. Ktor catches it as a generic `Exception` (like `SerializationException`) instead of a `ClientRequestException`.
-
-**Root Cause:** Ktor tries to parse the HTML body into your JSON data class *before* checking the HTTP status code. The parser panics and crashes the pipeline.
-
-**The Fix:** Force Ktor to validate the HTTP status code first so it throws the `4xx` exception before touching the body. Add `expectSuccess = true` to your HTTP client builder.
-
-```kotlin
-val client = HttpClient { // CIO, OkHttp, etc.
-    expectSuccess = true
-    // ... ContentNegotiation, logging, etc.
-}
-```
-###  IdeaVim Configuration & Cheat Sheet
+#  IdeaVim Configuration & Cheat Sheet
 
 This configuration is optimized for **Android Development** on **Arch Linux**. It prioritizes system clipboard synchronization (`unnamedplus`) and fast navigation without taking hands off the home row.
 
-## ⌨️ Key Bindings Cheat Sheet
+## Key Bindings Cheat Sheet
 
 ### Clipboard & Editing
 | Key | Mode | Action | Description |
@@ -192,4 +178,19 @@ nnoremap <leader>b  :action ToggleLineBreakpoint<CR>
 nnoremap <leader>db :action Debug<CR>
 nnoremap <leader>dr :action Run<CR>
 nnoremap <leader>ds :action Stop<CR>
+```
+
+# Ktor 429 HTML Parsing Crash
+
+**Symptom:** The API returns `429 Too Many Requests` as an HTML page instead of JSON. Ktor catches it as a generic `Exception` (like `SerializationException`) instead of a `ClientRequestException`.
+
+**Root Cause:** Ktor tries to parse the HTML body into your JSON data class *before* checking the HTTP status code. The parser panics and crashes the pipeline.
+
+**The Fix:** Force Ktor to validate the HTTP status code first so it throws the `4xx` exception before touching the body. Add `expectSuccess = true` to your HTTP client builder.
+
+```kotlin
+val client = HttpClient { // CIO, OkHttp, etc.
+    expectSuccess = true
+    // ... ContentNegotiation, logging, etc.
+}
 ```
